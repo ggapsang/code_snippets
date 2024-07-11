@@ -5,7 +5,7 @@ Function GetWorkbookFromUser() As Workbook
     Dim isWorkbookOpen As Boolean
         
     ' 파일 선택 창 표시
-    filePath = Application.GetOpenFilename("엑셀 파일(*.xls;*.xlsx), *.xls;*.xlsx", , "파일 선택", , False)
+    filePath = Application.GetOpenFilename("엑셀 파일(*.xls;*.xlsx;*.xlsb;*.xlsm), *.xls;*.xlsx;*.xlsb;*.xlsm", , "파일 선택", , False)
     
     ' 파일 선택 창에서 취소 버튼을 누른 경우
     If filePath = "False" Then

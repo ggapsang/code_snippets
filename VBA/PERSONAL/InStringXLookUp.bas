@@ -20,12 +20,12 @@ Function INSTRXLOOKUP(lookupValue As String, rngSearch As Range, rngReturn As Ra
 
     For i = LBound(arrSearch, 1) To UBound(arrSearch, 1)
         If reverse = True Then
-            If InStr(lookupValue, arrSearch(i, 1)) > 0 Then
+            If InStr(arrSearch(i, 1), lookupValue) > 0 Then
                 INSTRXLOOKUP = arrReturn(i, 1)
                 Exit Function
             End If
         Else
-            If InStr(arrSearch(i, 1), lookupValue) > 0 Then
+            If InStr(lookupValue, arrSearch(i, 1)) > 0 Then
                 INSTRXLOOKUP = arrReturn(i, 1)
                 Exit Function
             End If

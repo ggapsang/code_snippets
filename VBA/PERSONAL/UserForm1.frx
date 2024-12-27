@@ -1,0 +1,15 @@
+
+Private Sub btnSubmit_Click()
+    Dim pattern As String
+    Dim replacement As String
+    
+    pattern = Me.txtPattern.value
+    replacement = Me.txtReplacement.value
+    
+    Me.Hide
+    Call UseRR(pattern, replacement)
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub
